@@ -6,26 +6,13 @@ class Post {
     this.likes = likes;
     this.timestamp = timestamp;
   }
-  feed = [];
-  creatPost(usrN, content) {
-    post = {
-      addName(userN) {
-        return post.userN.push(userN);
-      },
-      addContent(content) {
-        return post.content.push(content);
-      },
-      genId() {
-        id = 0;
-        id += 1;
-        return id;
-      },
-    };
-    post.addName(usrN);
-    post.addContent(content);
-    post.genId();
-    feed.push(post);
-    console.log(feed);
-  }
 }
-creatPost("stuart", "goobing rn, need inspo");
+feed = [];
+let createPost = (userN, content) => {
+  feed.push(
+    new Post(this.id, this.userN, this.content, this.likes, this.timestamp),
+  );
+  return feed;
+};
+createPost("stuart", "goobering send pictures");
+console.log(feed);
