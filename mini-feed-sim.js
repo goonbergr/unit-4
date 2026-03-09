@@ -1,18 +1,25 @@
-class Post {
-  constructor(id, userN, content, likes, timestamp) {
-    this.id = id;
-    this.userN = userN;
-    this.content = content;
-    this.likes = likes;
-    this.timestamp = timestamp;
-  }
-}
+let id = 0;
 feed = [];
-let createPost = (userN, content) => {
-  feed.push(
-    new Post(this.id, this.userN, this.content, this.likes, this.timestamp),
-  );
-  return feed;
+let creatPost = (usrN, content) => {
+  id++;
+    post = {
+        id: id,
+        userN: [],
+        content: [],
+        likes: 0,
+        timestamp: 0,
+        addName(userN) {
+            return post.userN.push(userN);
+        },
+        addContent(content) {
+            return post.content.push(content);
+        },
+    ;
+  post.addName(usrN);
+  post.addContent(content);
+  feed.push(post);
+  console.log(feed);
 };
-createPost("stuart", "goobering send pictures");
-console.log(feed);
+creatPost("stuart", "goobing rn, need inspo");
+creatPost("stuart", "goobering");
+creatPost("stuart", "goober");
